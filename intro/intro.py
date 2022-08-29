@@ -6,4 +6,4 @@ a=3
 b=a
 print("a:",a,"b:",b)
 a=25
-print("a:",a,"b:")
+print("a:",a,"b:",b)
