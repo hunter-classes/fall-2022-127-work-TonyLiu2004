@@ -1,5 +1,10 @@
 import turtle
 
+def sample_function():
+  print("this is a function")
+  print("It can be ran multiple times")
+ 
+  
 wn = turtle.Screen()
 
 crash = turtle.Turtle()
@@ -24,3 +29,5 @@ for x in range(0, 4):
 
 wn.exitonclick()
 wn.mainloop()
+
+sample_function()
