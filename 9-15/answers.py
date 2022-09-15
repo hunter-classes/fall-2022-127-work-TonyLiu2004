@@ -1,12 +1,8 @@
 def is_even(n): # 7
-  if ((n%2)== 0):
-    return True
-  return False
+  return n%2==0
 
 def is_odd(n): # 8
-  if((n%2)==1):
-    return True
-  return False
+  return n%2==1
 
 def is_rightangled(a, b, c): # 10
   if((abs(a**2 + b**2 - c**2))<0.001):
