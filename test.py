@@ -1,6 +1,6 @@
 def testing(x):
-  if (x%2==0):
-    return True
-  return False
+  while (x < x*2):
+     print(x)
+     x=x+1
 
-print(testing(2))
+testing(4)
