@@ -1,10 +1,18 @@
 def piglatin(word):
   v="aeiouy"
+  i=".!?,-;'(){}[]-/@"
   ret=word.lower()
+  end=""
+  for x in ret:
+    for y in i:
+      if(x==y):
+        ret= ret.replace(y,"")
+        end=end+y 
+    
   if (v.find(ret[0:1]) !=-1 ):
-    return ret.capitalize() + "yay"
+    return ret.capitalize() + "yay"+end
   else:
-    return ret[1:].capitalize() + ret[0] + "ay"
+    return ret[1:].capitalize() + ret[0] + "ay"+end
 
 
 def initialize():
@@ -17,12 +25,10 @@ def bondify():
   last = input("What is your last name?")
   return last.capitalize() + ", " + first.capitalize() + " " + last.capitalize()
 
+#print(initialize())
+#print(bondify())
 
-
-print(initialize())
-print(bondify())
-
-print(piglatin("cookie"))
-print(piglatin("Monster"))
-print(piglatin("Easy"))
-print(piglatin("Hello"))
+print(piglatin("cookie."))
+print(piglatin("M!ons@ter."))
+print(piglatin("Easy."))
+print(piglatin("Hello."))
