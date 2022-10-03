@@ -31,4 +31,4 @@ def bondify():
 print(piglatin("cookie."))
 print(piglatin("M!ons@ter."))
 print(piglatin("Easy."))
-print(piglatin("Hello."))
+print(piglatin("Table!"))
