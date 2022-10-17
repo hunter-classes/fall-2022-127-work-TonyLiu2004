@@ -25,10 +25,10 @@ def add2List(l1,l2):
   else:
     return [l1[i] + l2[i] for i in range(len(l2))]
 
-def countWords(l1):
+def countWords(l1): #10
   return len([i for i in l1 if len(i)==5])
 
-def sumUntilEven(lst):
+def sumUntilEven(lst): #11
     sum=0
     for x in lst:
         if x%2==0:
@@ -37,7 +37,7 @@ def sumUntilEven(lst):
             sum+=x
     return sum
 
-def count(lst):
+def count(lst): #12
     count=0
     for x in lst:
         if x.lower() == "sam":
