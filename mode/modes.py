@@ -1,6 +1,6 @@
 def findLargest(l):
-  i=0
-  for x in l:
+  i=l[0]
+  for x in l[1:]:
     if x>i:
       i=x
   return i
