@@ -80,11 +80,11 @@ def fastMode(dataset):
         list[x] += 1
         # 3. the index with the highest
         # value in tallies is the mode
-    return max(list)
+    return list.index((max(list)))
 
 
 list = [1, 2, 34, 23, 2, 12, 2]
-list2 = [1, 2, 3, 12, 1, 3, 2, 12, 5, 3, 12, 1]
+list2 = [1, 2, 3, 12, 1, 3, 2, 12, 5, 3, 12, 1, 3]
 #print(findLargest(list))
 #print(freq(list, 2))
 #print(mode(list2))
