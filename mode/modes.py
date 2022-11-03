@@ -71,7 +71,7 @@ def fastMode(dataset):
     # 1. make a list of 100 slots
     # and set them all to 0
     # this will store our tallies
-    list = [0] * 100
+    list = [0] * (findLargest(dataset) + 1)
     # 2. Loop through our dataset
     # and for each item incremement
     # (add 1) to the appropriate
@@ -84,7 +84,7 @@ def fastMode(dataset):
 
 
 list = [1, 2, 34, 23, 2, 12, 2]
-list2 = [1, 2, 3, 12, 1, 3, 2, 12, 5, 3, 12, 1, 3]
+list2 = [1, 2, 3, 12, 1, 3, 2, 12, 5, 3, 12, 1, 1]
 #print(findLargest(list))
 #print(freq(list, 2))
 #print(mode(list2))
