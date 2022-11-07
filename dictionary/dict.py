@@ -50,4 +50,25 @@ def countAlphabet(file):
 #print(new_inventory['strawberries'])
 
 #3 Test
-countAlphabet("alice.txt")
+#countAlphabet("alice.txt")
+  
+dt = {"abc":[1,2,3], "def":[4,5,6],"ghi":[7,8,9]}
+dt["abc"][0] = 10
+k = dt.keys()
+#print(k)
+#for item in k:
+  #print('person[',item,'] = ',dt[item])
+#yt = ("helo",123,345)
+#a,b,c = yt
+#print(a)
+#print(b)
+#print(c)
+def countWords(s):
+  counts={}
+  for word in s.split():
+    counts.setdefault(word,0)
+    counts[word]= counts[word]+1
+  return counts
+
+str="Testing count words, should count all the words here and put the word and the count into a dictionary and return it. The english essay is going to give me a headache, I do not want to do it but I have to. I have math class today and I do not want to go."
+print(countWords(str))
