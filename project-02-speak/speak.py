@@ -15,8 +15,6 @@ with open("pirate.dat", 'r') as file:
         w1 = line[0:line.find(":")]
         w2 = line[line.find(":") + 1:len(line)]
         pirate[w1] = w2
-
-
 def pirateSpeak(file):
     ret = ""
     #end = ""
