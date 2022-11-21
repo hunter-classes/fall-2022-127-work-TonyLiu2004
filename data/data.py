@@ -1,8 +1,10 @@
 import csv
+import matplotlib.pyplot as plt
+
 
 dict = {}
 keys = [] 
-def makeDict(file):
+def makeDict(file): # creates a dictionaries with the key as the game number from 1 to 10000 and the data is a dictionary with each stat
   global keys 
   with open(file, 'r') as f:
     reader = csv.reader(f)
@@ -19,7 +21,7 @@ def makeDict(file):
       n+=1
   f.close()
 
-def avgPerTeam():
+def avgPerTeam(): #Average of all the stats
   dictAvgs = {}
   for games in dict:
     for k in keys:
@@ -33,5 +35,23 @@ def avgPerTeam():
 
 makeDict("lol.csv")
 avgStats = avgPerTeam()
+del avgStats["gameId"] #Don't need game ID
 for x in avgStats:
   print(x,avgStats[x])
+
+
+
+plotDict = avgStats.copy()
+del plotDict["blueTotalGold"]
+del plotDict["blueTotalExperience"]
+del plotDict["redTotalGold"]
+del plotDict["redTotalExperience"]
+del plotDict["blueGoldPerMin"]
+del plotDict["redGoldPerMin"]
+del plotDict["blueTotalMinionsKilled"]
+del plotDict["redTotalMinionsKilled"]
+plt.title("LOL Average Stats Blue vs Red (10000 games)")
+plt.xlabel("Stats")
+plt.xticks(rotation = 90)
+plt.bar(plotDict.keys(),plotDict.values(),color=['blue','red'])
+plt.show()
