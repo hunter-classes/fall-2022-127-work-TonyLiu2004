@@ -1,6 +1,22 @@
 import csv
 import matplotlib.pyplot as plt
 
+#Analysis: Although the statistics between red and blue are mostly the same, there were some small but noticable differences even with 10000 games;
+#Red team had a 50.7% winrate while blue team has a 49.3% winrate
+#Blue team has a slightly higher number of wards destoryed (blue 2.7907, red 2.6902 )
+#Blue team kills more heralds (boss monster) than red team
+#Red team kills more dragons (boss monster) than blue team
+#Red team kills more elite monsters (mini-bosses) than blue team
+#Blue team gets more first bloods (first kill) than red team
+
+#Summary: Even though data from 10,000 games were collected from games with experienced players,
+#there are still small differences in statistics. This may be due to the map layout of the game;
+#the boss locations sometimes favor one team over the other because of the terrain near them. 
+#Also, sometimes the UI can cover up enemy projectiles which can hinder player performance, but this
+#issue is much less relevant to experienced players who have good control over their player cameras.
+#However, UI coverings can impact the red team more because red teams starts top right while blue team starts bottom left. (imagine a 2d plane)
+
+
 
 dict = {}
 keys = [] 
@@ -36,10 +52,10 @@ def avgPerTeam(): #Average of all the stats
 makeDict("lol.csv")
 avgStats = avgPerTeam()
 del avgStats["gameId"] #Don't need game ID
-for x in avgStats:
+avgStats["redWins"] = 1-avgStats["blueWins"] #redWins not included because it can be inferred from blueWins since there are only 2 teams
+for x in avgStats: # prints all the stats
   print(x,avgStats[x])
 
-avgStats["redWins"] = 1-avgStats["blueWins"] #redWins not included because it can be inferred from blueWins since there are only 2 teams
 #plotDict = avgStats.copy()
 #del plotDict["blueTotalGold"]
 #del plotDict["blueTotalExperience"]
@@ -73,11 +89,13 @@ for keys in plotDict.keys():
 for x in toBeDeleted:
   del plotDict[x]
 
+#original
 #plt.title("LOL Average Stats Blue vs Red (10000 games)")
 #plt.xlabel("Stats")
 #plt.xticks(rotation = 90)
 #plt.bar(plotDict.keys(),plotDict.values(),color=['blue','red'])
 #plt.show()
+#end original
 
 #testing 1
 #figure, axis = plt.subplots(2)
