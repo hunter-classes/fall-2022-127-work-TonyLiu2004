@@ -1,5 +1,6 @@
 import csv
 import matplotlib.pyplot as plt
+#Used import csv and matplotlib
 
 #Analysis: Although the statistics between red and blue are mostly the same, there were some small but noticable differences even with 10000 games;
 #Red team had a 50.7% winrate while blue team has a 49.3% winrate
