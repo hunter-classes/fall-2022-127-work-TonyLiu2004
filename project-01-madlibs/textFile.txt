@@ -1,0 +1,2 @@
+<HERO> hates <NOUN> and likes <NOUN>. This morning, <HERO> <VERB> <NOUN> because <NOUN> was <VERB>. Tommorrow, <HERO> will <VERB> the <NOUN>. Now, <HERO> likes <NOUN>.
+There once was a <NOUN> that <VERB> to <NOUN>, the name of the <NOUN> was the <HERO>.
